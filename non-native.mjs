@@ -1,7 +1,7 @@
 import { Connection, Keypair, LAMPORTS_PER_SOL, PublicKey, Transaction, TransactionInstruction, clusterApiUrl, sendAndConfirmTransaction } from "@solana/web3.js";
 
 
-const connection = new Connection('http://localhost:8899', 'confirmed');
+const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
 
 const signer = Keypair.generate();
 console.log(`\n SECRET_KEY = ${signer.secretKey}\n`);
